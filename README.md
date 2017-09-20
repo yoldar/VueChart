@@ -1,6 +1,6 @@
 # VueChart
 
-Vue wrapper for Chart.
+Very simple Vue wrapper for Chart.
 
 ## dependencies
 
