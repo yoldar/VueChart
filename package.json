@@ -1,0 +1,36 @@
+{
+	"name": "vuechart",
+	"version": "17.9.20",
+	"description": "Vue wrapper for Chart.",
+	"main": "VueChart.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SeregPie/VueChart.git"
+	},
+	"keywords": [
+		"vue",
+		"chart",
+		"component",
+		"plugin",
+		"canvas",
+		"bar",
+		"line",
+		"radar",
+		"scatter",
+		"area",
+		"pie",
+		"doughnut",
+		"polar",
+		"diagram"
+	],
+	"author": "Sergej Sintschilin",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/SeregPie/VueChart/issues"
+	},
+	"homepage": "https://github.com/SeregPie/VueChart#readme",
+	"dependencies": {
+		"chart.js": "^2.7.0",
+		"vue": "^2.4.4"
+	}
+}
