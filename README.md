@@ -46,19 +46,19 @@ Include the code in your page via a CDN.
 
 `type`
 
-...
+Changing the value will recreate the chart.
 
 ---
 
 `data`
 
-...
+Changing the value will update the chart.
 
 ---
 
 `options`
 
-...
+Changing the value will recreate the chart.
 
 ---
 

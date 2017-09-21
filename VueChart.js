@@ -23,7 +23,7 @@
 		},
 
 		watch: {
-			type(type) {
+			type() {
 				this.createChart();
 			},
 
@@ -35,13 +35,12 @@
 				deep: true,
 			},
 
-			/*options: {
-				handler(options) {
-					this.setChartOptions(options);
-					this.updateChart();
+			options: {
+				handler() {
+					this.createChart();
 				},
 				deep: true,
-			},*/
+			},
 		},
 
 		methods: {
@@ -67,12 +66,6 @@
 					this.chart.data = data;
 				}
 			},
-
-			/*setChartOptions(options) {
-				if (this.chart) {
-					this.chart.options = options;
-				}
-			},*/
 
 			updateChart() {
 				if (this.chart) {
