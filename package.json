@@ -1,7 +1,7 @@
 {
 	"name": "vuechart",
-	"version": "17.9.21",
-	"description": "Vue wrapper for Chart.",
+	"version": "17.9.25",
+	"description": "Very simple Vue wrapper for Chart.",
 	"main": "VueChart.js",
 	"repository": {
 		"type": "git",

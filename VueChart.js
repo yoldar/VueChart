@@ -24,7 +24,7 @@
 
 		watch: {
 			type() {
-				this.createChart();
+				this.recreateChart();
 			},
 
 			data: {
@@ -37,15 +37,19 @@
 
 			options: {
 				handler() {
-					this.createChart();
+					this.recreateChart();
 				},
 				deep: true,
 			},
 		},
 
 		methods: {
-			createChart() {
+			recreateChart() {
 				this.destroyChart();
+				this.createChart();
+			},
+
+			createChart() {
 				if (this.$el) {
 					this.chart = new Chart(this.$el, {
 						type: this.type,
