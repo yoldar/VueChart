@@ -1,8 +1,12 @@
 {
 	"name": "vuechart",
-	"version": "17.9.25",
+	"version": "17.10.22",
 	"description": "Very simple Vue wrapper for Chart.",
 	"main": "VueChart.js",
+	"scripts": {
+		"build": "rollup -c",
+		"prepublish": "npm run build"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/SeregPie/VueChart.git"
@@ -31,6 +35,19 @@
 	"homepage": "https://github.com/SeregPie/VueChart#readme",
 	"dependencies": {
 		"chart.js": "^2.7.0",
-		"vue": "^2.4.4"
+		"vue": "^2.5.2"
+	},
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-minify": "^0.2.0",
+		"babel-polyfill": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
+		"babel-runtime": "^6.26.0",
+		"eslint": "^4.9.0",
+		"rollup": "^0.50.0",
+		"rollup-plugin-babel": "^3.0.2",
+		"rollup-plugin-babel-minify": "^3.1.2",
+		"rollup-plugin-commonjs": "^8.2.4",
+		"rollup-plugin-node-resolve": "^3.0.0"
 	}
 }
