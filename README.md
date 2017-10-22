@@ -46,11 +46,19 @@ Include the code in your page via a CDN.
 
 `type`
 
+*type*: `String`
+
+The type of the chart.
+
 Changing the value will recreate the chart.
 
 ---
 
 `data`
+
+*type*: `Object`
+
+The data. 
 
 Changing the value will update the chart.
 
@@ -58,10 +66,16 @@ Changing the value will update the chart.
 
 `options`
 
+*type*: `Object`
+
+The configuration options of the chart of the current type.
+
 Changing the value will recreate the chart.
 
 ---
 
 `updateConfig`
 
-...
+*type*: `Object`
+
+The additional configuration for the update process.
