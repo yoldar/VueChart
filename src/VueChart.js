@@ -76,6 +76,8 @@ let VueChart = {
 	},
 };
 
-Vue.component(VueChart.name, VueChart);
+if (typeof window !== 'undefined') {
+	Vue.component(VueChart.name, VueChart);
+}
 
 export default VueChart;

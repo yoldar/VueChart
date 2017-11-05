@@ -24,8 +24,16 @@ Include the code in your page via a CDN.
 ```html
 
 <script src="https://unpkg.com/vue"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 <script src="https://unpkg.com/vuechart"></script>
+
+```
+
+Include [polyfills](https://polyfill.io/) to support older browsers.
+
+```html
+
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 
 ```
 
@@ -58,7 +66,7 @@ Changing the value will recreate the chart.
 
 *type*: `Object`
 
-The data. 
+The data.
 
 Changing the value will update the chart.
 

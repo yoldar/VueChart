@@ -1,37 +1,23 @@
-import babel from 'rollup-plugin-babel';
-import nodeResolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
-import minify from 'rollup-plugin-babel-minify';
+
+import buble from 'rollup-plugin-buble';
+import uglify from 'rollup-plugin-uglify';
+
+let globals = {
+	'vue': 'Vue',
+	'chart.js': 'Chart',
+};
 
 export default {
 	input: 'src/VueChart.js',
-	external: ['vue', 'chart.js'],
+	external: Object.keys(globals),
 	output: {
 		file: 'VueChart.js',
 		format: 'umd',
 		name: 'VueChart',
-		globals: {
-			'vue': 'Vue',
-			'chart.js': 'Chart',
-		},
+		globals,
 	},
 	plugins: [
-		babel({
-			exclude: 'node_modules/**',
-			presets: [
-				['env', {
-					targets: {
-						'browsers': ['last 2 versions'],
-					},
-					modules: false,
-					useBuiltIns: true,
-				}],
-			],
-		}),
-		nodeResolve(),
-		commonjs({
-			include: 'node_modules/**',
-		}),
-		minify({comments: false}),
+		buble(),
+		uglify(),
 	],
 };
