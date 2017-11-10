@@ -24,7 +24,7 @@ Include the code in your page via a CDN.
 ```html
 
 <script src="https://unpkg.com/vue"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+<script src="https://unpkg.com/chart.js/dist/Chart.min.js"></script>
 <script src="https://unpkg.com/vuechart"></script>
 
 ```
