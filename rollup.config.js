@@ -1,9 +1,7 @@
-
 import buble from 'rollup-plugin-buble';
 import uglify from 'rollup-plugin-uglify';
 
 let globals = {
-	'vue': 'Vue',
 	'chart.js': 'Chart',
 };
 

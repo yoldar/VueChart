@@ -1,6 +1,6 @@
 {
 	"name": "vuechart",
-	"version": "17.11.5",
+	"version": "17.12.9",
 	"description": "Very simple Vue wrapper for Chart.",
 	"main": "VueChart.js",
 	"scripts": {
@@ -12,20 +12,20 @@
 		"url": "git+https://github.com/SeregPie/VueChart.git"
 	},
 	"keywords": [
-		"vue",
+		"area",
+		"bar",
+		"canvas",
 		"chart",
 		"component",
-		"plugin",
-		"canvas",
-		"bar",
+		"diagram",
+		"doughnut",
 		"line",
+		"pie",
+		"plugin",
+		"polar",
 		"radar",
 		"scatter",
-		"area",
-		"pie",
-		"doughnut",
-		"polar",
-		"diagram"
+		"vue"
 	],
 	"author": "Sergej Sintschilin",
 	"license": "MIT",
@@ -35,12 +35,12 @@
 	"homepage": "https://github.com/SeregPie/VueChart#readme",
 	"dependencies": {
 		"chart.js": "^2.7.1",
-		"vue": "^2.5.3"
+		"vue": "^2.5.9"
 	},
 	"devDependencies": {
-		"eslint": "^4.10.0",
-		"rollup": "^0.50.0",
-		"rollup-plugin-buble": "^0.16.0",
+		"eslint": "^4.13.0",
+		"rollup": "^0.52.1",
+		"rollup-plugin-buble": "^0.18.0",
 		"rollup-plugin-uglify": "^2.0.1"
 	}
 }

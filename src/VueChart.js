@@ -1,22 +1,13 @@
-import Vue from 'vue';
 import Chart from 'chart.js';
 
 let VueChart = {
 	name: 'VueChart',
-
-	render(createElement) {
-		return createElement('canvas');
-	},
 
 	props: {
 		type: String,
 		data: Object,
 		options: Object,
 		updateConfig: Object,
-	},
-
-	mounted() {
-		this.createChart();
 	},
 
 	watch: {
@@ -38,6 +29,10 @@ let VueChart = {
 			},
 			deep: true,
 		},
+	},
+
+	mounted() {
+		this.createChart();
 	},
 
 	methods: {
@@ -74,10 +69,14 @@ let VueChart = {
 			}
 		},
 	},
+
+	render(createElement) {
+		return createElement('canvas');
+	},
 };
 
-if (typeof window !== 'undefined') {
-	Vue.component(VueChart.name, VueChart);
-}
-
 export default VueChart;
+
+if (typeof window !== 'undefined' && window.Vue) {
+	window.Vue.component(VueChart.name, VueChart);
+}

@@ -9,7 +9,7 @@ Very simple Vue wrapper for Chart.
 
 ## setup
 
-Install the [package](https://www.npmjs.com/package/vuechart) via npm.
+### NPM
 
 ```sh
 
@@ -17,9 +17,37 @@ npm install vuechart
 
 ```
 
----
+### ES2015
 
-Include the code in your page via a CDN.
+Register the component globally.
+
+```js
+
+import Vue from 'vue';
+import VueChart from 'vuechart';
+
+Vue.component(VueChart.name, VueChart);
+
+```
+
+*or*
+
+Register the component in the scope of another instance.
+
+```js
+
+import VueChart from 'vuechart';
+
+export default {
+  // ...
+  components: {
+	[VueChart.name]: VueChart,
+  },
+};
+
+```
+
+### Browser
 
 ```html
 
@@ -28,6 +56,8 @@ Include the code in your page via a CDN.
 <script src="https://unpkg.com/vuechart"></script>
 
 ```
+
+If Vue is detected, the component will be registered automatically.
 
 Include [polyfills](https://polyfill.io/) to support older browsers.
 
@@ -52,38 +82,9 @@ Include [polyfills](https://polyfill.io/) to support older browsers.
 
 ## properties
 
-`type`
-
-*type*: `String`
-
-The type of the chart.
-
-Changing the value will recreate the chart.
-
----
-
-`data`
-
-*type*: `Object`
-
-The data.
-
-Changing the value will update the chart.
-
----
-
-`options`
-
-*type*: `Object`
-
-The configuration options of the chart of the current type.
-
-Changing the value will recreate the chart.
-
----
-
-`updateConfig`
-
-*type*: `Object`
-
-The additional configuration for the update process.
+| property | type | description |
+| ---: | :--- | :--- |
+| `type` | `String` | The type of the chart.<br/>Changing the value will recreate the chart. |
+| `data` | `Object` | The data.<br/>Changing the value will update the chart. |
+| `options` | `Object` | The configuration options of the chart of the current type.<br/>Changing the value will recreate the chart. |
+| `updateConfig` | `Object` | The additional configuration for the update process. |
