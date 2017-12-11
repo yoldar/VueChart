@@ -45,8 +45,8 @@ let VueChart = {
 			if (this.$el) {
 				this.chart = new Chart(this.$el, {
 					type: this.type,
-					data: this.data,
-					options: this.options,
+					data: JSON.parse(JSON.stringify(this.data)),
+					options: JSON.parse(JSON.stringify(this.options)),
 				});
 			}
 		},
@@ -59,7 +59,7 @@ let VueChart = {
 
 		setChartData(value) {
 			if (this.chart) {
-				this.chart.data = value;
+				this.chart.data = JSON.parse(JSON.stringify(value));
 			}
 		},
 
