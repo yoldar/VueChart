@@ -35,6 +35,10 @@ let VueChart = {
 		this.createChart();
 	},
 
+	beforeDestroy() {
+		this.destroyChart();
+	},
+
 	methods: {
 		recreateChart() {
 			this.destroyChart();
