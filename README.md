@@ -41,7 +41,7 @@ import VueChart from 'vuechart';
 export default {
   // ...
   components: {
-	[VueChart.name]: VueChart,
+    [VueChart.name]: VueChart,
   },
 };
 
