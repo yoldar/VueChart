@@ -1,6 +1,6 @@
 {
 	"name": "vuechart",
-	"version": "17.12.14",
+	"version": "17.12.15",
 	"description": "Very simple Vue wrapper for Chart.",
 	"main": "VueChart.js",
 	"scripts": {

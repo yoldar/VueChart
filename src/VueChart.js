@@ -1,5 +1,7 @@
 import Chart from 'chart.js';
 
+import Reflect_clone from './helpers/Reflect/clone';
+
 let VueChart = {
 	name: 'VueChart',
 
@@ -49,8 +51,8 @@ let VueChart = {
 			if (this.$refs.canvas) {
 				this.chart = new Chart(this.$refs.canvas, {
 					type: this.type,
-					data: JSON.parse(JSON.stringify(this.data)),
-					options: JSON.parse(JSON.stringify(this.options)),
+					data: Reflect_clone(this.data),
+					options: Reflect_clone(this.options),
 				});
 			}
 		},
@@ -63,7 +65,7 @@ let VueChart = {
 
 		setChartData(value) {
 			if (this.chart) {
-				this.chart.data = JSON.parse(JSON.stringify(value));
+				this.chart.data = Reflect_clone(value);
 			}
 		},
 
