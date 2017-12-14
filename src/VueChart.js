@@ -46,8 +46,8 @@ let VueChart = {
 		},
 
 		createChart() {
-			if (this.$el) {
-				this.chart = new Chart(this.$el, {
+			if (this.$refs.canvas) {
+				this.chart = new Chart(this.$refs.canvas, {
 					type: this.type,
 					data: JSON.parse(JSON.stringify(this.data)),
 					options: JSON.parse(JSON.stringify(this.options)),
@@ -75,7 +75,26 @@ let VueChart = {
 	},
 
 	render(createElement) {
-		return createElement('canvas');
+		return(
+			createElement(
+				'div',
+				{
+					style: {
+						position: 'relative',
+						width: '100%',
+						height: '100%',
+					},
+				},
+				[
+					createElement(
+						'canvas',
+						{
+							ref: 'canvas'
+						},
+					),
+				],
+			)
+		);
 	},
 };
 

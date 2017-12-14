@@ -1,6 +1,6 @@
 {
 	"name": "vuechart",
-	"version": "17.12.12",
+	"version": "17.12.14",
 	"description": "Very simple Vue wrapper for Chart.",
 	"main": "VueChart.js",
 	"scripts": {
@@ -35,10 +35,10 @@
 	"homepage": "https://github.com/SeregPie/VueChart#readme",
 	"dependencies": {
 		"chart.js": "^2.7.1",
-		"vue": "^2.5.9"
+		"vue": "^2.5.10"
 	},
 	"devDependencies": {
-		"eslint": "^4.13.0",
+		"eslint": "^4.13.1",
 		"rollup": "^0.52.1",
 		"rollup-plugin-buble": "^0.18.0",
 		"rollup-plugin-uglify": "^2.0.1"
