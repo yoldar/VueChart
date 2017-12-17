@@ -9,7 +9,7 @@ Very simple Vue wrapper for Chart.
 
 ## setup
 
-### NPM
+### npm
 
 ```sh
 
@@ -17,7 +17,7 @@ npm install vuechart
 
 ```
 
-### ES2015
+### ES module
 
 Register the component globally.
 
@@ -47,7 +47,7 @@ export default {
 
 ```
 
-### Browser
+### browser
 
 ```html
 
