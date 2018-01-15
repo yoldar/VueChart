@@ -11,31 +11,26 @@ Very simple Vue wrapper for Chart.
 
 ### npm
 
-```sh
-
+```shell
 npm install vuechart
-
 ```
 
 ### ES module
 
 Register the component globally.
 
-```js
-
+```javascript
 import Vue from 'vue';
 import VueChart from 'vuechart';
 
 Vue.component(VueChart.name, VueChart);
-
 ```
 
 *or*
 
 Register the component in the scope of another instance.
 
-```js
-
+```javascript
 import VueChart from 'vuechart';
 
 export default {
@@ -44,40 +39,35 @@ export default {
     [VueChart.name]: VueChart,
   },
 };
-
 ```
 
 ### browser
 
 ```html
-
 <script src="https://unpkg.com/vue"></script>
 <script src="https://unpkg.com/chart.js/dist/Chart.min.js"></script>
 <script src="https://unpkg.com/vuechart"></script>
-
 ```
 
 If Vue is detected, the component will be registered automatically.
 
+---
+
 Include [polyfills](https://polyfill.io/) to support older browsers.
 
 ```html
-
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Object.entries"></script>
-
 ```
 
 ## usage
 
 ```html
-
 <vue-chart
   type="bar"
   :data="chartData"
   :options="{scales: {yAxes: [{ticks: {beginAtZero: true}}]}}"
   :update-config="{duration: 800, easing: 'easeOutBounce'}"
 ></vue-chart>
-
 ```
 
 ## properties
