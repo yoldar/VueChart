@@ -1,7 +1,7 @@
 {
 	"name": "vuechart",
 	"version": "17.12.15",
-	"description": "Very simple Vue wrapper for Chart.",
+	"description": "A very simple Vue wrapper for Chart.",
 	"main": "VueChart.js",
 	"scripts": {
 		"build": "rollup -c",
