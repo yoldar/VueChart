@@ -1,6 +1,6 @@
 # VueChart
 
-Very simple Vue wrapper for Chart.
+A very simple Vue wrapper for Chart."
 
 ## dependencies
 
@@ -66,7 +66,7 @@ If Vue is detected, the component will be registered automatically.
 
 | property | type | description |
 | ---: | :--- | :--- |
-| `type` | `String` | The type of the chart.<br/>Changing the value will recreate the chart. |
-| `data` | `Object` | The data.<br/>Changing the value will update the chart. |
-| `options` | `Object` | The configuration options of the chart of the current type.<br/>Changing the value will recreate the chart. |
-| `updateConfig` | `Object` | The additional configuration for the update process. |
+| `type` | `String` | Type of the chart. Changing the value will recreate the chart. |
+| `data` | `Object` | Chart data. Changing the value will update the chart. |
+| `options` | `Object` | Configuration options of the chart of the current type. Changing the value will recreate the chart. |
+| `updateConfig` | `Object` | Additional configuration for the update process. |

@@ -1,8 +1,8 @@
 import Chart from 'chart.js';
 
-import Reflect_clone from './helpers/Reflect/clone';
+import Lang_clone from 'x/src/Lang/clone';
 
-let VueChart = {
+export default {
 	name: 'VueChart',
 
 	props: {
@@ -99,9 +99,3 @@ let VueChart = {
 		);
 	},
 };
-
-export default VueChart;
-
-if (typeof window !== 'undefined' && window.Vue) {
-	window.Vue.component(VueChart.name, VueChart);
-}

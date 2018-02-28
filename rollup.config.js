@@ -1,20 +1,24 @@
 import buble from 'rollup-plugin-buble';
+import nodeResolve from 'rollup-plugin-node-resolve';
 import uglify from 'rollup-plugin-uglify';
+
+import pkg from './package.json';
 
 let globals = {
 	'chart.js': 'Chart',
 };
 
 export default {
-	input: 'src/VueChart.js',
+	input: 'src/index.js',
 	external: Object.keys(globals),
 	output: {
-		file: 'VueChart.js',
+		file: pkg.main,
 		format: 'umd',
-		name: 'VueChart',
+		name: 'almete.WordCloud',
 		globals,
 	},
 	plugins: [
+		nodeResolve(),
 		buble(),
 		uglify(),
 	],
