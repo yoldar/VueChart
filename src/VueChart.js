@@ -1,89 +1,41 @@
 import Chart from 'chart.js';
 
-import Function_stubObject from 'x/src/Function/stubObject';
-import Lang_clone from 'x/src/Lang/clone';
+let {clone, merge} = Chart.helpers;
 
 export default {
 	name: 'VueChart',
 
 	props: {
 		type: String,
-		data: {
-			type: Object,
-			default: Function_stubObject,
-		},
-		options: {
-			type: Object,
-			default: Function_stubObject,
-		},
-		updateConfig: {
-			type: Object,
-			default: Function_stubObject,
-		},
-	},
-
-	watch: {
-		type() {
-			this.recreateChart();
-		},
-
-		data: {
-			handler(value) {
-				this.setChartData(value);
-				this.updateChart();
-			},
-			deep: true,
-		},
-
-		options: {
-			handler() {
-				this.recreateChart();
-			},
-			deep: true,
-		},
+		data: Object,
+		options: Object,
+		updateConfig: Object,
 	},
 
 	mounted() {
-		this.createChart();
+		this.$watch(() => {
+			let type = this.type;
+			let data = clone(this.data);
+			let options = this.options;
+			let updateConfig = this.updateConfig;
+			let chart = this.chart;
+
+			if (chart) {
+				if (chart.config.type === type) {
+					merge(chart, {data, options});
+					chart.update(updateConfig);
+					return;
+				}
+				chart.destroy();
+			}
+			this.chart = new Chart(this.$refs.canvas, clone({type, data, options}));
+		});
 	},
 
 	beforeDestroy() {
-		this.destroyChart();
-	},
-
-	methods: {
-		recreateChart() {
-			this.destroyChart();
-			this.createChart();
-		},
-
-		createChart() {
-			if (this.$refs.canvas) {
-				this.chart = new Chart(this.$refs.canvas, {
-					type: this.type,
-					data: Lang_clone(this.data),
-					options: Lang_clone(this.options),
-				});
-			}
-		},
-
-		destroyChart() {
-			if (this.chart) {
-				this.chart.destroy();
-			}
-		},
-
-		setChartData(value) {
-			if (this.chart) {
-				this.chart.data = Lang_clone(value);
-			}
-		},
-
-		updateChart() {
-			if (this.chart) {
-				this.chart.update(this.updateConfig);
-			}
-		},
+		if (this.chart) {
+			this.chart.destroy();
+		}
 	},
 
 	render(createElement) {
