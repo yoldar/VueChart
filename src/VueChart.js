@@ -1,5 +1,6 @@
 import Chart from 'chart.js';
 
+import Function_stubObject from 'x/src/Function/stubObject';
 import Lang_clone from 'x/src/Lang/clone';
 
 export default {
@@ -7,9 +8,18 @@ export default {
 
 	props: {
 		type: String,
-		data: Object,
-		options: Object,
-		updateConfig: Object,
+		data: {
+			type: Object,
+			default: Function_stubObject,
+		},
+		options: {
+			type: Object,
+			default: Function_stubObject,
+		},
+		updateConfig: {
+			type: Object,
+			default: Function_stubObject,
+		},
 	},
 
 	watch: {
@@ -51,8 +61,8 @@ export default {
 			if (this.$refs.canvas) {
 				this.chart = new Chart(this.$refs.canvas, {
 					type: this.type,
-					data: Reflect_clone(this.data),
-					options: Reflect_clone(this.options),
+					data: Lang_clone(this.data),
+					options: Lang_clone(this.options),
 				});
 			}
 		},
@@ -65,7 +75,7 @@ export default {
 
 		setChartData(value) {
 			if (this.chart) {
-				this.chart.data = Reflect_clone(value);
+				this.chart.data = Lang_clone(value);
 			}
 		},
 

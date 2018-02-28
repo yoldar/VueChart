@@ -14,7 +14,7 @@ export default {
 	output: {
 		file: pkg.main,
 		format: 'umd',
-		name: 'almete.WordCloud',
+		name: 'VueChart',
 		globals,
 	},
 	plugins: [
