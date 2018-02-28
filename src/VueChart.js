@@ -1,6 +1,9 @@
 import Chart from 'chart.js';
 
-let {clone, merge} = Chart.helpers;
+import mergeData from './mergeData';
+import mergeOptions from './mergeOptions';
+
+let {clone} = Chart.helpers;
 
 export default {
 	name: 'VueChart',
@@ -16,19 +19,20 @@ export default {
 		this.$watch(() => {
 			let type = this.type;
 			let data = clone(this.data);
-			let options = this.options;
+			let options = clone(this.options);
 			let updateConfig = this.updateConfig;
 			let chart = this.chart;
 
 			if (chart) {
 				if (chart.config.type === type) {
-					merge(chart, {data, options});
+					mergeData(chart.data, data);
+					mergeOptions(chart.options, options);
 					chart.update(updateConfig);
 					return;
 				}
 				chart.destroy();
 			}
-			this.chart = new Chart(this.$refs.canvas, clone({type, data, options}));
+			this.chart = new Chart(this.$refs.canvas, {type, data, options});
 		});
 	},
 
