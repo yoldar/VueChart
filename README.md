@@ -12,7 +12,7 @@ A very simple Vue wrapper for Chart.
 ### npm
 
 ```shell
-npm install vuechart
+npm i vuechart
 ```
 
 ### ES module
@@ -66,7 +66,7 @@ If Vue is detected, the component will be registered automatically.
 
 | property | type | description |
 | ---: | :--- | :--- |
-| `type` | `String` | Type of the chart. Changing the value will recreate the chart. |
-| `data` | `Object` | Data of the chart. |
-| `options` | `Object` | Configuration options of the chart of the current type. |
-| `updateConfig` | `Object` | Additional configuration for the update process. |
+| `type` | `String` | The type of the chart. Changing the value will recreate the chart. |
+| `data` | `Object` | The data of the chart. |
+| `options` | `Object` | The configuration options of the chart of the current type. |
+| `updateConfig` | `Object` | The additional configuration for the update process. |
