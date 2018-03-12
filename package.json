@@ -34,13 +34,13 @@
 	},
 	"homepage": "https://github.com/SeregPie/VueChart#readme",
 	"dependencies": {
-		"chart.js": "^2.7.1",
-		"vue": "^2.5.13"
+		"chart.js": "^2.7.2",
+		"vue": "^2.5.15"
 	},
 	"devDependencies": {
-		"rollup": "^0.56.3",
+		"rollup": "^0.56.5",
 		"rollup-plugin-buble": "^0.19.2",
-		"rollup-plugin-node-resolve": "^3.0.3",
+		"rollup-plugin-node-resolve": "^3.2.0",
 		"rollup-plugin-uglify": "^3.0.0",
 		"x": "github:SeregPie/MyJavaScriptHelpers"
 	}
