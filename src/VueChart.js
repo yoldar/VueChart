@@ -43,7 +43,7 @@ export default {
 	},
 
 	render(createElement) {
-		return(
+		return (
 			createElement(
 				'div',
 				{
@@ -55,10 +55,24 @@ export default {
 				},
 				[
 					createElement(
-						'canvas',
+						'div',
 						{
-							ref: 'canvas'
+							style: {
+								position: 'absolute',
+								left: 0,
+								top: 0,
+								right: 0,
+								bottom: 0,
+							},
 						},
+						[
+							createElement(
+								'canvas',
+								{
+									ref: 'canvas',
+								},
+							),
+						],
 					),
 				],
 			)
