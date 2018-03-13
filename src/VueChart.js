@@ -36,12 +36,6 @@ export default {
 		});
 	},
 
-	beforeDestroy() {
-		if (this.chart) {
-			this.chart.destroy();
-		}
-	},
-
 	render(createElement) {
 		return (
 			createElement(
