@@ -12,7 +12,7 @@ A very simple Vue wrapper for Chart.
 ### npm
 
 ```shell
-npm i vuechart
+npm install vuechart
 ```
 
 ### ES module
