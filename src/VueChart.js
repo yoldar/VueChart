@@ -32,6 +32,25 @@ export default {
 				}
 				chart.destroy();
 			}
+
+			Chart.plugins.register({
+				afterDraw: function(chart) {
+			  	if (chart.data.datasets.length === 0) {
+			      var ctx = chart.chart.ctx;
+			      var width = chart.chart.width;
+			      var height = chart.chart.height
+			      chart.clear();
+			      
+			      ctx.save();
+			      ctx.textAlign = 'center';
+			      ctx.textBaseline = 'middle';
+			      ctx.font = "300 14px Open Sans";
+			      ctx.fillText(chart.data.noDataLabel, width / 2, height / 2);
+			      ctx.restore();
+			    }
+			  }
+			});
+
 			this.chart = new Chart(this.$refs.canvas, {type, data, options});
 		});
 	},
